@@ -1,5 +1,5 @@
 /*
-JS se comporta de manera distinta cuando le pasamos un objeto como parametro, le pasa igual que las varaibles.
+JS se comporta de manera distinta cuando le pasamos un objeto como parametro, no pasa igual con los valores primitivo.
 
 Cuando le pasamos un objeto como una referecia, todo lo que hagamos dentro modificara al objeto fuera. Para evitar esto debemos crear un nuevo objeto. Lo vemos a continuacion:
 */
@@ -31,6 +31,7 @@ function aumentaPeso(persona) {
 aumentaPeso(leonardo);
 console.log(leonardo);
 /*
+Como podemos ver el objeto original se modifico.
 {nombre: "Leonardo", apellido: "Sánchez", edad: 17, peso: 77}
 */
 console.log('====================================');
@@ -56,3 +57,16 @@ let marcosMasViejo = cumpleanos(marcos);
 
 console.log(marcos);
 console.log(marcosMasViejo);
+
+console.log('====================================');
+
+// Ahora podemos ver el caso de un primitivo, como vemos el primitivo no se modifica despues de pasar por dentro de la funcion.
+
+let altura = 23;
+function aumentarAltura(altura) {
+    altura = altura +=7;
+    console.log(altura);
+}
+
+aumentarAltura(altura);
+console.log(altura);
