@@ -15,6 +15,7 @@ let profesion = 'Jugador de baloncesto';
 
 
 function imprimirNombreEnMay() {
+
     nombre = nombre.toUpperCase();
     console.log(nombre); // MICHAEL
 }
@@ -26,9 +27,9 @@ console.log(nombre); // MICHAEL -> Como puedes ver la variable global se ha modi
 
 let fruta = 'Manzana';
 
-function imprimirNombreEnMin(fruta) {
+function imprimirNombreEnMin(n) {
     console.log(fruta); // Manzana
-    fruta = fruta.toLowerCase();
+    n = fruta.toLowerCase();
     console.log(fruta); // manzana
 }
 
